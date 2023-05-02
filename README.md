@@ -7,7 +7,7 @@
 3. Run: make shell
 4. Make sure you're in the workspace directory now
 
-Drop the mk.sh into your workspace and run with `source mk.sh
+Drop the mk.sh into your workspace and run with `source mk.sh`
 
 ### Usage
 
