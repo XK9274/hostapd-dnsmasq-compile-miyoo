@@ -290,19 +290,6 @@ if [ -f "$FIN_BIN_DIR/bin/$BIN_NAME" ]; then # Check if the bin file for BINNAME
 	cp $ROOTDIR/$BIN_NAME/sbin/dnsmasq $ROOTDIR/$BIN_NAME/bin
 	cp $ROOTDIR/iw-5.9/iw $ROOTDIR/$BIN_NAME/bin
 	
-	# remove some excess fat from the end product dir
-	# rm -rf $BIN_NAME/aclocal/
-	# rm -rf $BIN_NAME/docs/
-	# rm -rf $BIN_NAME/doc/
-	# rm -rf $BIN_NAME/certs/
-	# rm -rf $BIN_NAME/include/
-	# rm -rf $BIN_NAME/bin/{gio,glib-compile-resources,gdbus,gsettings,gapplication,gresource,pytho,gio-querymodules,gobject-query,glib-compile-schemas}
-	# rm -rf $BIN_NAME/share/{doc,autoconf,man,gdb,glib-2.0,automake-1.16,aclocal-1.16,aclocal,bash-completion,gtk-doc,glib2-0,info,libtool,pkgconfig,readline,tabset,terminfo,util-macros,vala,xcb,zcb,zsh}
-	# rm -rf $BIN_NAME/lib/{python3.7/test,pkgconfig,cmake}
-	# rm -rf $BIN_NAME/xml
-	# rm -rf $BIN_NAME/misc
-	# rm -rf $BIN_NAME/GConf
-	# rm -rf $BIN_NAME/man
 fi	
 
 log_files=(				   					   
