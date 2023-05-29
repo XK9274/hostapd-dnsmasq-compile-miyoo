@@ -86,9 +86,9 @@ done
 cd ~/workspace/
 
 # Start logging and begin
-exec 3>&1 4>&2
-trap 'exec 2>&4 1>&3' 0 1 2 3
-exec 1> >(tee -a "$LOGFILE") 2>&1					
+# exec 3>&1 4>&2
+# trap 'exec 2>&4 1>&3' 0 1 2 3
+# exec 1> >(tee -a "$LOGFILE") 2>&1					
 # </Envsetup>
 
 #Download everything, but check if it already exists.
