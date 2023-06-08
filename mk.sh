@@ -246,11 +246,12 @@ cd hostapd
 cp defconfig .config
 sed -i '27s/.*/&\nCFLAGS += -I\/mnt\/SDCARD\/App\/hostapd\/include\//' Makefile # adds cflags
 sed -i 's/export BINDIR ?= \/usr\/local\/bin/export BINDIR ?= \/mnt\/SDCARD\/App\/hostapd\/bin/' Makefile # sets output dir
+sed -i '118s/#//' .config # enables WPS support
+sed -i '171s/#//' .config # enables a debug file
 export LDFLAGS="-L$FIN_BIN_DIR/lib -lnl-3 -lnl-genl-3 -lssl -lcrypto" # sets ld flags for the libs
 make clean && make -j$(( $(nproc) - 2 )) && make install -j$(( $(nproc) - 2 )) > ../../logs/hostapd-2.10.txt 2>&1 &
 wait $!
-cd ..
-cd ..
+cd ../../
 
 # compiles iw as a wifitool for testing
 echo -e "-Compiling \033[32miwl\033[0m"
